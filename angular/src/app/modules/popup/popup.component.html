@@ -1,13 +1,44 @@
-<h1>Popup</h1>
-<p>
-  You can easily send messages from the popup to the content page with the provided Tab ID! (tabId=<strong>{{
-    tabId
-  }}</strong
-  >)
-</p>
+<!-- SignUp Page -->
+<!-- <app-sign-in *ngIf="!isUserLogged"></app-sign-in> -->
+<app-navbar></app-navbar>
+<app-auth></app-auth>
 
-<button (click)="onClick()">Click me to test</button>
+<!-- <div *ngIf="isUserLogged"> -->
+  <!-- Header Page -->
+  <!-- <app-header (onPageRefreshEvent)="triggerPageRefreshEvent($event)"></app-header> -->
 
-<p>
-  <strong>{{ message() }}</strong>
-</p>
+  <!-- Watch list -->
+  <!-- <div *ngIf="parsedProfiles && parsedProfiles.type"> -->
+    <!-- <app-watchlist (onSelectedWatchlist)="triggerWatchlistSelectionEvent($event)" [isCompany]="showCompanySystem"
+      [isContact]="showContactSystem" (onInitSelectedWatchlist)="triggerInitWatchlistSelectionEvent($event)"></app-watchlist> -->
+
+    <!-- Result Container -->
+    <!-- <app-result-page *ngIf="selectedWatchlist && selectedWatchlist.id"
+      [parsedProfiles]="parsedProfiles.data" [selectedWatchlist]="selectedWatchlist" [profileType]="parsedProfiles.type"
+      [isContact]="showContactSystem" [isCompany]="showCompanySystem">
+    </app-result-page> -->
+  <!-- </div> -->
+
+  <!-- Loader -->
+  <!-- <div *ngIf="!parsedProfiles">
+    <div class="text-center">
+      <p-progressSpinner></p-progressSpinner>
+    </div>
+  </div> -->
+
+  <!-- Error Page -->
+  <!-- <div *ngIf="showErrorPage" class="error-page">
+    <p>This page is currently not supported.</p>
+    <p-divider></p-divider>
+    <p>
+      Please visit a Company or Contact Profile Page or Advanced Search Results on a supported website.
+      If you are experiencing this issue on a supported website, please contact
+      <a href="mailto:support@dealsignal.com">support&#64;dealsignal.com</a>
+    </p>
+  </div> -->
+
+  <!-- Put in to the Footer -->
+  <!-- <div class="popup-footer">
+    <button type="button" class="btn btn-cancel" (click)="logOut()">Logout</button>
+  </div>
+</div> -->

@@ -1,29 +1,23 @@
 {
   "manifest_version": 3,
-  "name": "Angular Chrome Extension",
-  "short_name": "Angular Chrome Extension",
-  "version": "1.0.0",
-  "description": "Angular Chrome Extension scaffold project",
-  "permissions": ["tabs", "sidePanel"],
+  "name": "DealSignal Chrome Extension",
+  "short_name": "DealSignal",
+  "version": "3.0.0",
+  "description": "DealSignal Sales Chrome Extension",
+  "permissions": ["tabs", "cookies", "storage", "system.display"],
   "action": {
-    "default_popup": "index.html?#/popup",
-    "default_title": "Angular Chrome Extension"
+    "default_title": "DealSignal Sales Chrome Extension"
   },
-  "options_page": "index.html?#/options",
-  "side_panel": {
-    "default_path": "side_panel.html"
-  },
-  "chrome_url_overrides": {
-    "newtab": "index.html?#/tab"
-  },
+  "host_permissions": ["*://*.linkedin.com/"],
   "content_scripts": [
     {
-      "js": ["contentPage.js"],
-      "matches": ["<all_urls>"]
+      "js": ["jquery.min.js", "contentPage.js"],
+      "matches": ["*://*.linkedin.com/*"]
     }
   ],
+
   "background": {
     "service_worker": "serviceWorker.js"
   },
-  "content_security_policy": { "extension_pages": "script-src 'self'; object-src 'self'" }
+  "content_security_policy": { "extension_pages" : "script-src 'self'; object-src 'self'" }
 }

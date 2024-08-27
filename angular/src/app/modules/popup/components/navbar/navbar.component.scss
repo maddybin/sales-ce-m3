@@ -1,0 +1,90 @@
+@import '../../../../../variables.scss';
+
+.header-section {
+  display: flex;
+  flex-direction: column;
+
+  .main-nav {
+    height: 100px;
+    width: 430px;
+    display: flex;
+    background: rgb(48, 35, 174);
+    background: linear-gradient(45deg, rgba(48, 35, 174, 1) 0%, rgba(223, 28, 80, 1) 50%, rgba(241, 90, 70, 1) 85%, rgba(248, 194, 44, 1) 100%);
+    align-items: center;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      width: 340px;
+      font-size: 12px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+
+      li {
+        cursor: pointer;
+
+        a {
+          display: flex;
+          color: #fff;
+          width: 85px;
+          flex-direction: column;
+          height: 100px;
+          align-items: center;
+          justify-content: center;
+          text-transform: uppercase;
+          font-size: 10px;
+          font-weight: 500;
+
+          i {
+            font-size: 20px;
+            display: block;
+            margin: 0 auto;
+          }
+
+          span {
+            display: block;
+            margin-top: 10px;
+          }
+
+          &:hover {
+            background: rgba(#000, 0.1);
+          }
+        }
+
+        &.disabled {
+          cursor: not-allowed;
+
+          a {
+            pointer-events: none;
+            background: rgba(#000, 0.1);
+          }
+        }
+      }
+    }
+
+    .version-info {
+      .extension-logo-wrap {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        font-size: 12px;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 60px;
+        background: rgba(#fff, 0.1);
+
+        img {
+          width: 100%;
+        }
+
+        small {
+          display: none;
+        }
+      }
+    }
+  }
+}

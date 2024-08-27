@@ -1,0 +1,34 @@
+.popup-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  padding: 20px 0;
+  font-size: 12px;
+}
+
+.loader-pos{
+  left: 45%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+
+.error-page {
+  margin: 16px;
+  font-size: 14px;
+  color: #6D6D6D;
+}
+
+.btn-cancel {
+  border: 1px solid #e5e5e5;
+  font-size: 14px;
+  margin-left: 10px;
+  &:hover {
+    background-color: #e6e6e6;
+    border-color: #adadad;
+  }
+}

@@ -31,7 +31,8 @@
               "angular/src/assets",
               "angular/src/manifest.json",
               "angular/src/side_panel.html",
-              "angular/src/side_panel.js"
+              "angular/src/side_panel.js",
+              "angular/src/jquery.min.js"
             ],
             "styles": ["angular/src/styles.scss"],
             "scripts": []
