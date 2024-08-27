@@ -1,7 +1,10 @@
 <!-- SignUp Page -->
 <!-- <app-sign-in *ngIf="!isUserLogged"></app-sign-in> -->
 <app-navbar></app-navbar>
-<app-auth></app-auth>
+
+<app-auth *ngIf="!isUserLoggedIn" (onUserLoggedIn)="isUserLoggedIn = $event"></app-auth>
+
+<app-result-page *ngIf="isUserLoggedIn"></app-result-page>
 
 <!-- <div *ngIf="isUserLogged"> -->
   <!-- Header Page -->

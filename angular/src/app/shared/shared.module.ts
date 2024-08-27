@@ -12,7 +12,6 @@ const SHARED_COMPONENTS = [
   imports: [],
   exports: [],
   declarations: [],
-  entryComponents: [],
   providers: []
 })
 export class SharedModule { }

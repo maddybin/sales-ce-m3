@@ -1,58 +1,45 @@
-import commonjs from '@rollup/plugin-commonjs'
-import resolve from '@rollup/plugin-node-resolve'
-import typescript from '@rollup/plugin-typescript'
-import { terser } from 'rollup-plugin-terser'
+import commonjs from '@rollup/plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
+import typescript from '@rollup/plugin-typescript';
+import { terser } from 'rollup-plugin-terser';
 
-const production = !process.env.ROLLUP_WATCH
+const production = !process.env.ROLLUP_WATCH;
 
-const plugins = [resolve(), commonjs({ extensions: ['.js', '.ts'] }), production && terser()]
-const compilerOptions = {
-  target: 'es6',
-  module: 'ESNext',
-  esModuleInterop: true,
-  strict: true,
-  skipLibCheck: true
-}
-
-const inputContentPage = './src/contentPage.ts'
-const outputContentPage = '../angular/dist/contentPage.js'
-
-const inputServiceWorker = './src/serviceWorker.ts'
-const outputServiceWorker = '../angular/dist/serviceWorker.js'
+const plugins = [
+  resolve(),
+  commonjs({
+    extensions: ['.js'], // Removed '.ts' unless necessary
+  }),
+  typescript({
+    compilerOptions: {
+      target: 'es6',
+      module: 'ES2022', // Adjusted to 'ES2022' for consistency
+      esModuleInterop: true,
+      strict: true,
+      skipLibCheck: true,
+      lib: ['dom', 'ES2022'],
+    },
+  }),
+  production && terser(),
+];
 
 export default [
   {
-    input: inputContentPage,
+    input: './src/contentPage.ts',
     output: {
-      file: outputContentPage,
+      file: '../angular/dist/contentPage.js',
       format: 'iife',
-      sourcemap: !production
+      sourcemap: !production,
     },
-    plugins: [
-      ...plugins,
-      typescript({
-        compilerOptions: {
-          ...compilerOptions,
-          lib: ['dom', 'ES2022']
-        }
-      })
-    ]
+    plugins,
   },
   {
-    input: inputServiceWorker,
+    input: './src/serviceWorker.ts',
     output: {
-      file: outputServiceWorker,
+      file: '../angular/dist/serviceWorker.js',
       format: 'iife',
-      sourcemap: !production
+      sourcemap: !production,
     },
-    plugins: [
-      ...plugins,
-      typescript({
-        compilerOptions: {
-          ...compilerOptions,
-          lib: ['ES2022']
-        }
-      })
-    ]
-  }
-]
+    plugins,
+  },
+];

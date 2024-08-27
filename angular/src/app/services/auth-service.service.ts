@@ -11,7 +11,7 @@ export class AuthService {
   constructor(private requestService: RequestService) { }
 
   login(user: any): Observable<any> {
-    return this.requestService.post(`${ApiUrl.backendUriv0}/${ApiUrl.authUrl}`, { user });
+    return this.requestService.post(`${ApiUrl.backendUrlV0}/${ApiUrl.authUrl}`, user);
   }
 
   isUserLogged() {

@@ -5,8 +5,8 @@ import { environment } from "src/environments/environment";
  */
 export class ApiUrl {
   // Base URLs
-  static backendUriv0 = `${environment.baseURL}`;
-  static backendUriv1 = `${environment.baseURLV1}`;
+  static backendUrlV0 = `${environment.baseURL}`;
+  static backendUrlV1 = `${environment.baseURLV1}`;
   static baseAppUrl = `${environment.baseAppUrl}`;
   static contactExist = 'linkedin_contacts/global_contact?contact_source=sales_ce';
   static contactWatchlistListing = 'contact_watchlists/ce_listing';

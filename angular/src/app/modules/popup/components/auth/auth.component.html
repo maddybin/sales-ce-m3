@@ -1,1 +1,40 @@
-<p>auth works!</p>
+<div class="login-page">
+  <div class="login-nav">
+    <i class="icon-dealsignal"></i>
+  </div>
+  <p>Start saving critical account and lead data to your Lists from Chrome </p>
+  <div class="login-form">
+    <h3>Sign In to Your Account!</h3>
+    <form class="form-extension-login" id="loginForm">
+      <div class="form-group">
+        <label for="email" class="hide"></label>
+        <input type="email" class="form-control" id="dsUserEmail" #dsUserEmail formControlName="email" placeholder="Email" required value="maddy@dealsignal.com">
+        <!-- <span *ngIf="loginForm.get('email').errors &&
+          loginForm.get('email').touched" class="form-error">Email is required!</span> -->
+      </div>
+      <div class="form-group">
+        <label for="password" class="hide"></label>
+        <input type="password" class="form-control" id="dsUserPassword" #dsUserPassword formControlName="password"
+          placeholder="Password" required minlength="6" value="Market@#$9093">
+          <!-- <span *ngIf="loginForm.get('password').errors &&
+          loginForm.get('password').touched" class="form-error">Please enter valid password!</span> -->
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" formControlName="acceptTerms"> I agree to the DealSignal 
+          <a href="#">Terms of Service</a>
+           and 
+           <a href="https://www.dealsignal.com/privacy-policy/" target="_blank">Privacy Policy</a>
+        </label>
+      </div>
+      <div class="login-btn">
+        <button class="btn btn-success btn-signin" type="submit" (click)="onSubmit()">{{signingButtonText}}</button>
+      </div>
+    </form>
+  </div>
+  <div class="login-footer">
+    <a href="mailto:support@dealsignal.com" target="_blank">Contact Support</a>
+    <a href="https://www.dealsignal.com/" target="_blank">DealSignal.com</a>
+    <a href="https://www.dealsignal.com/privacy-policy/" target="_blank">Terms & Conditions</a>
+  </div>
+</div>
