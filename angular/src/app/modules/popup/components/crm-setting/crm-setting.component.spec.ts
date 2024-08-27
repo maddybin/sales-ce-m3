@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RefreshSettingComponent } from './refresh-setting.component';
+import { CrmSettingComponent } from './crm-setting.component';
 
-describe('RefreshSettingComponent', () => {
-  let component: RefreshSettingComponent;
-  let fixture: ComponentFixture<RefreshSettingComponent>;
+describe('CrmSettingComponent', () => {
+  let component: CrmSettingComponent;
+  let fixture: ComponentFixture<CrmSettingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RefreshSettingComponent]
+      imports: [CrmSettingComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RefreshSettingComponent);
+    fixture = TestBed.createComponent(CrmSettingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -4,9 +4,9 @@ import { TAB_ID } from 'src/app/app.config'
 import { AuthComponent } from './components/auth/auth.component'
 import { NavbarComponent } from './components/navbar/navbar.component'
 import { SavedListComponent } from './components/saved-list/saved-list.component'
-import { RefreshSettingComponent } from './components/refresh-setting/refresh-setting.component'
 import { StorageService } from 'src/app/services/storage.service'
 import { ResultPageComponent } from './components/result-page/result-page.component'
+import { CrmSettingComponent } from './components/crm-setting/crm-setting.component'
 
 @Component({
   selector: 'app-popup',
@@ -15,7 +15,7 @@ import { ResultPageComponent } from './components/result-page/result-page.compon
     AuthComponent, 
     NavbarComponent, 
     SavedListComponent,
-    RefreshSettingComponent,
+    CrmSettingComponent,
     ResultPageComponent
   ],
   providers: [StorageService],
@@ -25,6 +25,7 @@ import { ResultPageComponent } from './components/result-page/result-page.compon
 export class PopupComponent {
 
   isUserLoggedIn = false;
+  showSettingPage = false;
 
   message = signal('')
 
@@ -43,5 +44,15 @@ export class PopupComponent {
           : msg
       )
     })
+  }
+
+  onNavBarAction(resp: any) {
+    if(resp.action == 'refresh') {
+      this.showSettingPage = false;
+    }
+
+    if(resp.action == 'setting') {
+      this.showSettingPage = true;
+    }
   }
 }

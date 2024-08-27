@@ -1,10 +1,13 @@
 <!-- SignUp Page -->
 <!-- <app-sign-in *ngIf="!isUserLogged"></app-sign-in> -->
-<app-navbar></app-navbar>
+<app-navbar 
+(onNavBarAction)="onNavBarAction($event)"></app-navbar>
 
-<app-auth *ngIf="!isUserLoggedIn" (onUserLoggedIn)="isUserLoggedIn = $event"></app-auth>
+<app-auth *ngIf="!isUserLoggedIn && !showSettingPage" (onUserLoggedIn)="isUserLoggedIn = $event"></app-auth>
 
-<app-result-page *ngIf="isUserLoggedIn"></app-result-page>
+<app-result-page *ngIf="isUserLoggedIn && !showSettingPage"></app-result-page>
+
+<app-crm-setting *ngIf="showSettingPage"></app-crm-setting>
 
 
 
