@@ -8,5 +8,4 @@ import { Component } from '@angular/core';
   styleUrl: './saved-list.component.scss'
 })
 export class SavedListComponent {
-
 }

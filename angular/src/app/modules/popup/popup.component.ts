@@ -3,7 +3,6 @@ import { Component, Inject, signal } from '@angular/core'
 import { TAB_ID } from 'src/app/app.config'
 import { AuthComponent } from './components/auth/auth.component'
 import { NavbarComponent } from './components/navbar/navbar.component'
-import { SavedListComponent } from './components/saved-list/saved-list.component'
 import { StorageService } from 'src/app/services/storage.service'
 import { ResultPageComponent } from './components/result-page/result-page.component'
 import { CrmSettingComponent } from './components/crm-setting/crm-setting.component'
@@ -15,7 +14,6 @@ import { LoaderComponent } from './components/loader/loader.component'
   imports: [CommonModule, 
     AuthComponent, 
     NavbarComponent, 
-    SavedListComponent,
     CrmSettingComponent,
     ResultPageComponent,
     LoaderComponent
@@ -33,9 +31,7 @@ export class PopupComponent {
   message = signal('')
 
   constructor(@Inject(TAB_ID) readonly tabId: number, private storageService: StorageService) {
-    if (storageService.get('userLogged')) {
-      this.isUserLoggedIn = true;
-    }
+   this.checkLogin();
   }
 
   onClick() {
@@ -49,6 +45,10 @@ export class PopupComponent {
     })
   }
 
+  checkLogin() {
+    this.isUserLoggedIn = this.storageService.get('userLogged');
+  }
+
   onNavBarAction(resp: any) {
     if(resp.action == 'refresh') {
       this.showSettingPage = false;
@@ -57,5 +57,11 @@ export class PopupComponent {
     if(resp.action == 'setting') {
       this.showSettingPage = true;
     }
+  }
+
+  onLogout(isLogout: boolean) {
+    this.storageService.clear();
+    this.showSettingPage = false;
+    this.checkLogin();
   }
 }

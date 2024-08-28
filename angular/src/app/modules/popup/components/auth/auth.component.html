@@ -21,9 +21,9 @@
       </div>
       <div class="checkbox">
         <label>
-          <input type="checkbox" formControlName="acceptTerms"> I agree to the DealSignal 
-          <a href="#">Terms of Service</a>
-           and 
+          <input type="checkbox" formControlName="acceptTerms" #terms required
+          > I agree to the DealSignal 
+          <a href="#">Terms of Service</a> and 
            <a href="https://www.dealsignal.com/privacy-policy/" target="_blank">Privacy Policy</a>
         </label>
       </div>
@@ -38,3 +38,4 @@
     <a href="https://www.dealsignal.com/privacy-policy/" target="_blank">Terms & Conditions</a>
   </div>
 </div>
+<app-loader *ngIf="showLoader"></app-loader>

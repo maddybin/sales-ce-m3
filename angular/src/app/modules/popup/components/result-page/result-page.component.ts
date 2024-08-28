@@ -8,5 +8,4 @@ import { Component } from '@angular/core';
   styleUrl: './result-page.component.scss'
 })
 export class ResultPageComponent {
-
 }

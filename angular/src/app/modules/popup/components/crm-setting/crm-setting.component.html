@@ -1,1 +1,148 @@
-<p>crm-setting works!</p>
+<div class="settings-wrapper">
+  <!-- <div class="section-header">
+    <a href="#" id="backBtn" class="back-link"><i class="ce-caret-ic left-arrow"></i> Back</a>
+    <span class="title-txt">SETTINGS</span>
+  </div> -->
+  <!-- <div class="setting-tabs">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact-info-tab" role="tab" aria-controls="contact-info-tab" aria-selected="true">Contact</a>
+      </li>
+      <li class="nav-item" role="presentation" id='account'>
+        <a class="nav-link" id="company-tab" data-toggle="tab" href="#company-info-tab" role="tab" aria-controls="company-info-tab" aria-selected="false">Account</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade" id="contact-info-tab" role="tabpanel" aria-labelledby="contact-info-tab">
+        <div class="verify-checkbox-wrapper">
+          <p>Choose default settings to verify contact info</p>
+          <ul>
+            <li>
+              <div class="checkbox ds-checkbox">
+                <label>
+                  <span>Work Email</span> <input type="checkbox" id="check-verify-work-email">
+                  <span class="check-mark"></span>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="checkbox ds-checkbox">
+                <label>
+                  <span>Personal Email</span> <input type="checkbox" id="check-verify-personal-email">
+                  <span class="check-mark"></span>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="checkbox ds-checkbox">
+                <label>
+                  <span>Corporate Phone</span> <input type="checkbox" id="check-verify-corp-phone">
+                  <span class="check-mark"></span>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="checkbox ds-checkbox">
+                <label>
+                  <span>Direct and Mobile Phone</span> <input type="checkbox" id="check-verify-direct-phone">
+                  <span class="check-mark"></span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="choose-crm sec-wrapper pb-0p">
+          <p class="sec-heading">Choose CRM</p>
+          <div class="dropdown common-dropdown common-crm" id="crmDropdown">
+          </div>
+          <p class="sec-status brd-btm common-crm-status" id="crm-connection">CRM Status: <span>Not Connected</span></p>
+        </div>
+        <div class="choose-crm sec-wrapper">
+          <p class="sec-heading">Always Save As</p>
+          <div class="dropdown common-dropdown" id="crmTypeDropDown">
+          </div>
+          <p class="sec-heading">CRM Field Mapping</p>
+          <div class="dropdown common-dropdown" id="crmMappingDropDown">
+          </div>
+          <p class="sec-heading">Match Existing CRM Records by</p>
+          <div class="dropdown common-dropdown">
+            <a class="dropdown-toggle btn btn-default btn-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <span class="selected-choose-list">Email</span> <i class="ce-caret-ic"></i>
+            </a>
+          </div>
+          <p class="sec-heading">CRM Sync Type</p>
+          <div class="dropdown common-dropdown common-sync-type" id="crmSyncTypeDropDown">
+          </div>
+          <p class="sec-heading">CRM Sync Timing</p>
+          <div class="dropdown common-dropdown common-sync-timing" id="crmSyncTimingDropDown">
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="company-info-tab" role="tabpanel" aria-labelledby="company-info-tab">
+        <div class="verify-checkbox-wrapper">
+          <p>Choose default settings to verify company info</p>
+          <ul>
+            <li>
+              <div class="checkbox ds-checkbox">
+                <label>
+                  <span>Web Technologies</span> <input type="checkbox" id="check-verify-web-technologies">
+                  <span class="check-mark"></span>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="checkbox ds-checkbox">
+                <label>
+                  <span>Funding & Financials</span> <input type="checkbox" id="check-verify-funding-financials">
+                  <span class="check-mark"></span>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="checkbox ds-checkbox">
+                <label>
+                  <span>Company Leadership</span> <input type="checkbox" id="check-verify-company-leadership">
+                  <span class="check-mark"></span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="choose-crm sec-wrapper pb-0p">
+          <p class="sec-heading">Choose CRM</p>
+          <div class="dropdown common-dropdown common-crm" id="crmDropdown">
+          </div>
+          <p class="sec-status brd-btm common-crm-status" id="crm-connection">CRM Status: <span>Not Connected</span></p>
+        </div>
+        <div class="choose-crm sec-wrapper">
+          <p class="sec-heading">CRM Field Mapping</p>
+          <div class="dropdown common-dropdown" id="crmMappingDropDownCompany"></div>
+          <p class="sec-heading">Match Existing CRM Records by</p>
+          <div class="dropdown common-dropdown match-record-by"></div>
+          <p class="sec-heading">CRM Sync Type</p>
+          <div class="dropdown common-dropdown common-sync-type"></div>
+          <p class="sec-heading">CRM Sync Timing</p>
+          <div class="dropdown common-dropdown common-sync-timing"></div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>
+<!-- <div class="settings-footer">
+  <button class="btn ds-btn-primary btn-block" id="save-settings">Save</button>
+</div> -->
+<div class="setting-logout">
+  <a class="logout-link" id="icon-logout" (click)="logOut()">
+    <i class="ce-logout-ic"></i> Logout
+  </a>
+  <span class="version-release-info">
+    <span class="version" id="version-text">{{versionNumber}}</span>
+    <span class="release" id="version-updated">{{dateLastUpdated}}</span>
+  </span>
+</div>
+
+
+
+
+
+

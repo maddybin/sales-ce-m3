@@ -1,0 +1,115 @@
+@import "../../../../../variables.scss";
+
+.settings-wrapper {
+	background: $ds-white;
+	height: calc(100vh - 150px);
+	overflow-y: auto;
+	.verify-checkbox-wrapper {
+		padding: 25px 25px 0;
+		p {
+			font-size: 15px;
+			font-weight: 500;
+			color: $ds-blue-dark;
+		}
+		ul {
+			margin: 0;
+			padding: 0 0 15px 0;
+			list-style-type: none;
+			border-bottom: 1px solid rgba($ds-blue-dark, 0.2);
+			li {
+				padding: 0;
+			}
+		}
+	}
+	.sec-wrapper {
+		padding: 25px;
+		p {
+			font-size: 15px;
+			font-weight: 500;
+			color: $ds-blue-dark;
+			margin: 20px 0 10px 0;
+			&.sec-status {
+				margin: 10px 0 0 0;
+				font-size: 12px;
+				font-weight: normal;
+				color: rgba($ds-blue-dark, 0.8);
+				span {
+					font-size: 10px;
+					color: rgba($ds-blue-dark, 0.5);
+					position: relative;
+					padding-left: 10px;
+					&::after {
+						content: '';
+						width: 5px;
+						height: 5px;
+						position: absolute;
+						left: 0;
+						top: 0;
+						background: rgba(#000, 0.3);
+						border-radius: 10px;
+						margin-top: 4px;
+						margin-left: 0px;
+					}
+				}
+				&.brd-btm {
+					padding-bottom: 20px;
+					border-bottom: 1px solid rgba($ds-blue-dark, 0.2);
+				}
+				&.connected {
+					span {
+						color: $ds-green;
+						&::after {
+							background: $ds-green;
+						}
+					}
+				}
+			}
+			&:first-child {
+				margin: 0 0 10px 0;
+			}
+		}
+	}
+}
+.settings-footer {
+	padding: 20px 25px;
+	background: $ds-white;
+}
+.pb-0p {
+	padding-bottom: 0 !important;
+}
+.setting-logout {
+	display: flex;
+	align-items: center;
+	padding: 0px 25px;
+	font-size: 11px;
+	height: 40px;
+	justify-content: center;
+
+	a {
+		text-decoration: none;
+		color: #1C77C3;
+	}
+
+	.logout-link {
+		flex-grow: 1;
+		cursor: pointer;
+	}
+	.version-release-info {
+		.release {
+			margin-left: 15px;
+			position: relative;
+			&::after {
+				content: '';
+				position: absolute;
+				width: 5px;
+				height: 5px;
+				top: 0;
+				left: 0;
+				background: $ds-gray1;
+				border-radius: 10px;
+				margin-top: 4px;
+				margin-left: -10px;
+			}
+		}
+	}
+}

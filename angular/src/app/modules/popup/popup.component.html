@@ -7,7 +7,7 @@
 
 <app-result-page *ngIf="isUserLoggedIn && !showSettingPage"></app-result-page>
 
-<app-crm-setting *ngIf="showSettingPage"></app-crm-setting>
+<app-crm-setting *ngIf="showSettingPage" (onLogoutAction)="onLogout($event)"></app-crm-setting>
 
 <app-loader *ngIf="showLoader"></app-loader>
 
