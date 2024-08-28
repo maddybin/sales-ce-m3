@@ -7,6 +7,7 @@ import { SavedListComponent } from './components/saved-list/saved-list.component
 import { StorageService } from 'src/app/services/storage.service'
 import { ResultPageComponent } from './components/result-page/result-page.component'
 import { CrmSettingComponent } from './components/crm-setting/crm-setting.component'
+import { LoaderComponent } from './components/loader/loader.component'
 
 @Component({
   selector: 'app-popup',
@@ -16,7 +17,8 @@ import { CrmSettingComponent } from './components/crm-setting/crm-setting.compon
     NavbarComponent, 
     SavedListComponent,
     CrmSettingComponent,
-    ResultPageComponent
+    ResultPageComponent,
+    LoaderComponent
   ],
   providers: [StorageService],
   templateUrl: 'popup.component.html',
@@ -26,6 +28,7 @@ export class PopupComponent {
 
   isUserLoggedIn = false;
   showSettingPage = false;
+  showLoader = false;
 
   message = signal('')
 
